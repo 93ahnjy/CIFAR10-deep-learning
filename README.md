@@ -34,3 +34,30 @@ Softmax|	(None, 10)
 <br>
 
 ![google colab](https://user-images.githubusercontent.com/43025974/50833588-06ffe800-1395-11e9-82b9-c211cd2a1286.png)
+
+<br>
+<br>
+
+## 3. 사용된 기법
+1. Data augmentation
+  - image flip (right, left), rotation 등을 사용
+
+2. ELU(Exponential linear unit) 사용
+  - ELU가 cifar에서 괜찮은 성능을 나타낸다고 해서 사용
+
+3. Dropout 사용
+  - 3개 이상 부터는 효과는 좋을 텐데 5분내로 끝내기가 쉽지 않았다.
+
+4. weight regularization 사용
+  - 어떤 weight의 성분이 급격히 커지면 억제하는 역할을 한다. L2 regularizer 사용.
+  ```python
+  loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(labels=Y, logits=logits)) +\
+                    0.001*tf.nn.l2_loss(W_conv1) +\
+                    0.001*tf.nn.l2_loss(W_conv2) +\
+                    0.001*tf.nn.l2_loss(W_conv3) +\
+                    0.001*tf.nn.l2_loss(W_conv4) +\
+                    0.001*tf.nn.l2_loss(W_conv5) +\
+                    0.001*tf.nn.l2_loss(W_conv6) +\
+                    0.001*tf.nn.l2_loss(W_fc1)
+  
+  ```
