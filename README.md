@@ -3,9 +3,24 @@
 성능은 79% 나왔음.<br><br>
 
 ## 1. 네트워크 구조
-| 값 | 의미 | 기본값 |
-|---|:---:|---:|
-| `static` | 유형(기준) 없음 / 배치 불가능 | `static` |
-| `relative` | 요소 자신을 기준으로 배치 |  |
-| `absolute` | 위치 상 부모(조상)요소를 기준으로 배치 |  |
-| `fixed` | 브라우저 창을 기준으로 배치 |  |
+| Layer | Output shape |
+Conv2d	| (None, 32, 32, 32)
+Activation (Elu) |	(None, 32, 32, 32)
+Conv2d|	(None, 32, 32, 48)
+Activation (Elu)|	(None, 32, 32, 48)
+Max pool	|(None, 16, 16, 48)
+Conv2d	|(None, 16, 16, 48)
+Activation (Elu)|	(None, 16, 16, 48)
+Conv2d|	(None, 16, 16, 64)
+Activation (Elu)|	(None, 16, 16, 64)
+Max pool	|(None, 8, 8, 64)
+Drop out 0.5	|(None, 8, 8, 64)
+Conv2d	|(None, 8, 8, 128)
+Activation (Elu)|	(None, 8, 8, 128)
+Conv2d	|(None, 8, 8, 64)
+Activation (Elu)|	(None, 8, 8, 64)
+Max pool	|(None, 4, 4, 64)
+Drop out 0.6	|(None, 4, 4, 64)
+Flatten	|(None, 1024)
+Dense|	(None, 10)
+Softmax|	(None, 10)
