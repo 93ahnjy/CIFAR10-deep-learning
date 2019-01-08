@@ -39,17 +39,17 @@ Softmax|	(None, 10)
 <br>
 
 ## 3. 사용된 기법
-1. Data augmentation
--image flip (right, left), rotation 등을 사용
+1. Data augmentation  
+- image flip (right, left), rotation 등을 사용
 
-2. ELU(Exponential linear unit) 사용
--ELU가 cifar에서 괜찮은 성능을 나타낸다고 해서 사용
+2. ELU(Exponential linear unit) 사용  
+- ELU가 cifar에서 괜찮은 성능을 나타낸다고 해서 사용
 
-3. Dropout 사용
--3개 이상 부터는 효과는 좋을 텐데 5분내로 끝내기가 쉽지 않았다.
+3. Dropout 사용  
+- 3개 이상 부터는 효과는 좋을 텐데 5분내로 끝내기가 쉽지 않았다.
 
-4. weight regularization 사용
--어떤 weight의 성분이 급격히 커지면 억제하는 역할을 한다. L2 regularizer 사용.
+4. weight regularization 사용  
+- 어떤 weight의 성분이 급격히 커지면 억제하는 역할을 한다. L2 regularizer 사용.
   ```python
   loss = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(labels=Y, logits=logits)) +\
                     0.001*tf.nn.l2_loss(W_conv1) +\
@@ -61,7 +61,3 @@ Softmax|	(None, 10)
                     0.001*tf.nn.l2_loss(W_fc1)
   
   ```
-1. 순서가 필요한 목록
-1. 순서가 필요한 목록
-  - 순서가 필요하지 않은 목록(서브) 
-  - 순서가 필요하지 않은 목록(서브)
