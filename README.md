@@ -25,3 +25,8 @@ Drop out (0.6)	|(None, 4, 4, 64)
 Flatten	|(None, 1024)
 Dense|	(None, 10)
 Softmax|	(None, 10)
+<br>
+<br>
+
+## 2. 사용 환경
+* Google colab
