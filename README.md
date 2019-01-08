@@ -10,8 +10,6 @@ Activation (Elu) |	(None, 32, 32, 32)
 Conv2d|	(None, 32, 32, 48)
 Activation (Elu)|	(None, 32, 32, 48)
 Max pool	|(None, 16, 16, 48)
-
-|---|:---|
 Conv2d	|(None, 16, 16, 48)
 Activation (Elu)|	(None, 16, 16, 48)
 Conv2d|	(None, 16, 16, 64)
