@@ -62,4 +62,4 @@ Softmax|	(None, 10)
   ```
 
 &nbsp;&nbsp;**5. batch normalization 사용 조절**  
-&nbsp;&nbsp;&nbsp;&nbsp;- ELU가 batch normalization 역할을 한다고 하며, 또 dropout과 비슷한 성질이라 같이 쓸 필요가 없다고 한다. 확실히 줄여도 성능이 떨어지지 않기는 했고 훨씬 .<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;- ELU가 batch normalization 역할을 한다고 하며, 또 dropout과 비슷한 성질이라 같이 쓸 필요가 없다고 한다. 확실히 줄여도 성능이 떨어지지 않기는 했고 훨씬 빨.<br><br>
