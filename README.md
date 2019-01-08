@@ -30,3 +30,4 @@ Softmax|	(None, 10)
 
 ## 2. 사용 환경
 * Google colab
+![google colab](https://user-images.githubusercontent.com/43025974/50833588-06ffe800-1395-11e9-82b9-c211cd2a1286.png)
