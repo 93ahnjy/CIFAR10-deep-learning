@@ -4,7 +4,7 @@
 
 ## 1. 네트워크 구조
 | Layer | Output shape |
-|---|:---:|
+|---|:---|
 Conv2d	| (None, 32, 32, 32)
 Activation (Elu) |	(None, 32, 32, 32)
 Conv2d|	(None, 32, 32, 48)
